@@ -36,8 +36,8 @@ plugins:
 - jekyll-feed
 - jekyll-remote-theme
 
-github:
-  token: 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
+# github:
+#   token: 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
 
 # Exclude from processing.
 # The following items will not be processed, by default.
