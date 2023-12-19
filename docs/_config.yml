@@ -35,7 +35,6 @@ remote_theme: pages-themes/cayman@v0.2.0
 plugins:
 - jekyll-feed
 - jekyll-remote-theme
-- jekyll-toc
 
 github:
   token: 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

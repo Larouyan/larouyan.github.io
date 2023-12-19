@@ -1,14 +1,6 @@
 ---
-# title: "Are experts wo\u00B7men of the situation ?"
 layout: default
 ---
-
-<style>
-  p {
-    text-align: justify;
-  }
-  
-</style>
 
 <!-- Text can be **bold**, _italic_, or ~~strikethrough~~. -->
 

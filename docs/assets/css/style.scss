@@ -3,6 +3,10 @@
 
 @import 'jekyll-theme-cayman';
 
+h1, h2, h3, h4, h5, h6 {
+    color: rgb(100, 21, 21);
+}
+
 .content {
     display: flex;
     flex-wrap: wrap;
@@ -15,4 +19,13 @@
 
 .image {
     flex: 1;
+}
+
+.larger-text {
+  font-size: 3em; /* Adjust the size as needed */
+  font-weight: bold;
+}
+
+p {
+  text-align: justify;
 }
