@@ -20,7 +20,7 @@ In this flavorful journey, we dissect the essence of expertise, question the rel
 
 # About the Dataset
 
-This dataset consists beer reviews collected over period of 17 years (2001 to 2017) from two beer rating websites: BeerAdvocate (https://www.beeradvocate.com/) and RateBeer (https://www.ratebeer.com/). The dataset contain both textual and numerical data.
+This dataset consists beer reviews collected over period of 17 years (2001 to 2017) from two beer rating websites: [BeerAdvocate](https://www.beeradvocate.com/) and [RateBeer](https://www.ratebeer.com/). The dataset contain both textual and numerical data.
 
 Following some analysis, the decision was made to merge the datasets from both platforms. This merging process aimed to obtain more robust and meaningful results in terms of expert and non-expert ratings. It was observed that combining both datasets reduces more the bias than considering each dataset in isolation. To mitigate potential biases introduced by the merger, a standardization procedure was implemented for the different rating systems used by the two websites.
 
@@ -38,7 +38,9 @@ In this section we introduce our definition of experts, the ones that could be a
 
 Let's dive into the satistics:
 
-![CCDF](/assets/images/CCDF.png)
+<div style="text-align: center;">
+  <img src="/assets/images/CCDF.png" alt="CCDF">
+</div>
 
 The distribution has a heavy tail, indicating that there are numerous users who have posted only a few ratings, and conversely, a small number of users who are prolific raters. This observation motivates us to delve deeper into understanding the distinctions between these prolific raters and the rest of the user population. We'll pick up our experts from these figures.
 
@@ -59,20 +61,25 @@ By analyzing beers with at least 100 ratings per year, we observe that the diffe
 
 ### What an impact !
 
-![paleale](/assets/images/paleale.png)
-
+<div style="text-align: center;">
+  <img src="/assets/images/paleale.png" alt="Pale Ale">
+</div>
 
 First of all, even if experts account only for 0.5% of the active they represent a big part in the ratings of the beers. There are even some years and styles for which they overtake non experts part. Thus, their voice really matter since they can make a huge difference for the final average rating displayed on websites.
 
 Plus we found that experts tend to rate beers that are less famous than those that are rated by casual users. Threfore, the fast and early sucess might depend a lot on experts tastes.
 
-![expert_prop](/assets/images/expert_proportion_since_begining.png)
+<div style="text-align: center;">
+  <img src="/assets/images/expert_proportion_since_begining.png" alt="expert_prop">
+</div>
+
+
 
 In general, a notable pattern emerges where experts initiate the rating trend, establishing an initial inclination. As the evaluation proceeds, non-experts increasingly contribute ratings, potentially outnumbering expert assessments. This indicates that experts set the initial tone, and non-experts play a significant role by adding a larger volume of assessments as the overall trend develops.
 
 So it might be interesting to know if their ratings differentiate.
 
-![mean_ratings_experts_casuals](/assets/images/mean_ratings_experts_casuals.png)
+<iframe src="{{ site.baseurl }}/assets/plots/interactive_plot_attributes.html" width="100%" height="500" style="border: none;"></iframe>
 
 <iframe src="{{ site.baseurl }}/assets/plots/interactive_plot_styles.html" width="100%" height="500" style="border: none;"></iframe>
 
