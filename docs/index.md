@@ -17,14 +17,17 @@ Picture a novice local brewery dreaming of its grand opening. Should it place it
 
 In this flavorful journey, we dissect the essence of expertise, question the reliability of expert ratings, ponder whether a brewery's destiny lies in the hands of the crowd or the discerning palates of insiders, and if it is worthy to pay for some experts advices. Join us in this spirited exploration, where the frothy symphony of data unfolds the secrets of brewing success.
 
+<div style="text-align: center;">
+  <img src="/assets/images/dicaprio.png" alt="dicaprio" width="300" height="300">
+</div>
 
 # About the Dataset
 
-This dataset consists beer reviews collected over period of 17 years (2001 to 2017) from two beer rating websites: [BeerAdvocate](https://www.beeradvocate.com/) and [RateBeer](https://www.ratebeer.com/). The dataset contain both textual and numerical data.
+This dataset consists of beer reviews collected over a period of 17 years (from 2001 to 2017) available on two websites: [BeerAdvocate](https://www.beeradvocate.com/) and [RateBeer](https://www.ratebeer.com/). The dataset contain both textual (text reviews) and numerical data (ratings).
 
-Following some analysis, the decision was made to merge the datasets from both platforms. This merging process aimed to obtain more robust and meaningful results in terms of expert and non-expert ratings. It was observed that combining both datasets reduces more the bias than considering each dataset in isolation. To mitigate potential biases introduced by the merger, a standardization procedure was implemented for the different rating systems used by the two websites.
+Following some analysis, the decision was to merge the data from both platforms. This merging process aimed to obtain more robust and meaningful results in terms of expert and non-expert ratings. It was observed that combining both datasets reduces more the bias than considering each dataset separately. In order to mitigate potential biases introduced by the merge, a standardization procedure has been implemented for the different rating categories used by both websites.
 
-To increase comparability, users on one website were linked with their counterparts on the other website, and a similar linkage process was applied to beers. This approach ensures a more equitable evaluation of ratings across the merged dataset, providing a foundation for reliable and unbiased analyses.
+In order to increase comparability, users on one website were linked with their counterparts (ids) on the other website, and a similar linkage process was applied to beers. This approach ensures a more equitable evaluation of ratings across the merged dataset, providing a foundation for reliable and unbiased analyses.
 
 # Who is an expert ?
 
@@ -32,7 +35,7 @@ To increase comparability, users on one website were linked with their counterpa
 >
 > When something is important enough, you do it even if the odds are not in your favor. -->
 
-In this section we introduce our definition of experts, the ones that could be able to help making our beer successful.
+In this section, the definition of experts is introduced. The individuals who could be able to help making our beer successful.
 
 ## Distribution of the number of ratings per user
 
@@ -42,7 +45,7 @@ Let's dive into the satistics:
   <img src="/assets/images/CCDF.png" alt="CCDF">
 </div>
 
-The distribution has a heavy tail, indicating that there are numerous users who have posted only a few ratings, and conversely, a small number of users who are prolific raters. This observation motivates us to delve deeper into understanding the distinctions between these prolific raters and the rest of the user population. We'll pick up our experts from these figures.
+The distribution of the CCDF (complementary cumulative distribution function) is heavy-tailed, indicating that there are many users who have posted only few ratings, and conversely, a small number of users who are prolific raters. This observation motivates us to delve deeper into understanding the distinctions between these prolific raters and the rest of the user population. We'll pick up our experts from these figures.
 
 ### Define who is a massive rater
 
@@ -82,6 +85,8 @@ So it might be interesting to know if their ratings differentiate.
 <iframe src="{{ site.baseurl }}/assets/plots/interactive_plot_attributes.html" width="100%" height="500" style="border: none;"></iframe>
 
 <iframe src="{{ site.baseurl }}/assets/plots/interactive_plot_styles.html" width="100%" height="500" style="border: none;"></iframe>
+
+<iframe src="{{ site.baseurl }}/assets/plots/interactive_plot_beers.html" width="100%" height="500" style="border: none;"></iframe>
 
 It has been observed that experts tend to assess beers more critically than non-experts. However, despite these discernible distinctions, a common trend in ratings emerges, indicating that specific qualities are universally appreciated or disliked across both groups. Experts tend to be more severe than casual raters.
 Moreover, it was remarked that experts rate beers that are less famous than beers rated by casual users.
@@ -127,6 +132,10 @@ The conclusion is that we have more robust and complex reviews done by the exper
 Taking the example of influencing consumer choices, considering only direct stakeholders, which are the customers. If the dataset is used to manipulate consumer choices by promoting certain beers over others through fake reviews or biased recommendations, it can be deceptive and unethical.
 
 In this project, the aim is to use both datasets, incorporating the maximum number of reviews possible to minimize bias in consumer reviews and recommendations. Relying on only one dataset could introduce more bias into consumer choices. Hence, incorporating both datasets serves as an additional measure to mitigate bias and provide more robust and unbiased consumer advice.
+
+# Conclusion
+
+
 
 
 
