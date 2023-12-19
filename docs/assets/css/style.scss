@@ -3,3 +3,17 @@
 
 @import 'jekyll-theme-cayman';
 
+.content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .text {
+    flex: 1;
+    margin-right: 20px; /* Adjust the margin as needed */
+  }
+  
+  .image {
+    flex: 1;
+  }
+  

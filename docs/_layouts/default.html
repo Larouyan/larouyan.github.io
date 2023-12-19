@@ -10,6 +10,9 @@
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
     {% include head-custom.html %}
   </head>
   <body>
@@ -17,7 +20,7 @@
 
     <header class="page-header" role="banner" style="background-image: url('/assets/images/beer_background_2.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; padding: 100px 50px; color: #fff;">
       <h1 class="project-name" style="background: rgba(0, 0, 0, 0.5); padding: 10px;">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
-      <h2 class="project-tagline" style="background: rgba(0, 0, 0, 0.5); padding: 10px;">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+      <!-- <h2 class="project-tagline" style="background: rgba(0, 0, 0, 0.5); padding: 10px;">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2> -->
     </header>
     <main id="content" class="main-content" role="main">
       {{ content }}
