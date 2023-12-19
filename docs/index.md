@@ -11,11 +11,11 @@ layout: default
 
 <!-- Text can be **bold**, _italic_, or ~~strikethrough~~. -->
 
-Immersed in the sea of floating liters of beer within our minds, let's plunge into the intoxicating analysis of experts and their comparison with the "everyday" beer enthusiasts. But how to defines an expert among the customers ? Why should we truly trust what we label as expertise?
+Immersed in the sea of floating litters of beer within our minds, let's plunge into the intoxicating analysis of experts and their comparison with the "everyday" beer enthusiasts. But how to defines an expert among the customers? Why should truly trusting what is labelled as expertise?  
+ 
+Let's also take the example of a small local brewery that wishes to open. Should it rather trust the mass opinion, the public's view? Or should it simply rely on expert ratings to turn its beer into an unmissable blockbuster for a Saturday night with friends?
 
-Picture a novice local brewery dreaming of its grand opening. Should it place its faith in the masses, in the opinions of the general populace, or should it exclusively lean towards the ratings of the acclaimed experts? In the cacophony of choices, should it navigate the path of a crowd-pleaser or trust the experts to turn its brew into the blockbuster highlight of a Saturday night among friends?
-
-In this flavorful journey, we dissect the essence of expertise, question the reliability of expert ratings, ponder whether a brewery's destiny lies in the hands of the crowd or the discerning palates of insiders, and if it is worthy to pay for some experts advices. Join us in this spirited exploration, where the frothy symphony of data unfolds the secrets of brewing success.
+In this flavorful journey, focus was put on analyzing the reliability of expert ratings, pondering if a brewery’s destiny lies in the hands of the average after-football-game beer drinker or in the discerned palate of insiders. Take a beer and dive in this foamy exploration, where the abundance of data unfolds the secrets of brewing success.
 
 <div style="text-align: center;">
   <img src="/assets/images/dicaprio.png" alt="dicaprio" width="300" height="300">
@@ -25,7 +25,7 @@ In this flavorful journey, we dissect the essence of expertise, question the rel
 
 This dataset consists of beer reviews collected over a period of 17 years (from 2001 to 2017) available on two websites: [BeerAdvocate](https://www.beeradvocate.com/) and [RateBeer](https://www.ratebeer.com/). The dataset contain both textual (text reviews) and numerical data (ratings).
 
-Following some analysis, the decision was to merge the data from both platforms. This merging process aimed to obtain more robust and meaningful results in terms of expert and non-expert ratings. It was observed that combining both datasets reduces more the bias than considering each dataset separately. In order to mitigate potential biases introduced by the merge, a standardization procedure has been implemented for the different rating categories used by both websites.
+Following some analysis, the decision was to merge the data from both platforms. This merging process aimed to obtain more robust and meaningful results in terms of expert and non-expert ratings. It was observed that combining both datasets reduces more biases than considering each dataset separately. In order to mitigate potential biases introduced by the merge, a standardization procedure has been implemented for the different rating categories used by both websites.
 
 In order to increase comparability, users on one website were linked with their counterparts (ids) on the other website, and a similar linkage process was applied to beers. This approach ensures a more equitable evaluation of ratings across the merged dataset, providing a foundation for reliable and unbiased analyses.
 
@@ -87,6 +87,8 @@ So it might be interesting to know if their ratings differentiate.
 <iframe src="{{ site.baseurl }}/assets/plots/interactive_plot_styles.html" width="100%" height="500" style="border: none;"></iframe>
 
 <iframe src="{{ site.baseurl }}/assets/plots/interactive_plot_beers.html" width="100%" height="500" style="border: none;"></iframe>
+
+<iframe src="{{ site.baseurl }}/assets/plots/interactive_plot_styles_rating.html" width="100%" height="500" style="border: none;"></iframe>
 
 It has been observed that experts tend to assess beers more critically than non-experts. However, despite these discernible distinctions, a common trend in ratings emerges, indicating that specific qualities are universally appreciated or disliked across both groups. Experts tend to be more severe than casual raters.
 Moreover, it was remarked that experts rate beers that are less famous than beers rated by casual users.
