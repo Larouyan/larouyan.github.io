@@ -1,4 +1,5 @@
 ---
+# title: "Are experts wo\u00B7men of the situation ?"
 layout: default
 ---
 
@@ -23,11 +24,11 @@ In this flavorful journey, focus was put on analyzing the reliability of expert 
 
 # About the Dataset
 
-This dataset consists of beer reviews collected over a period of 17 years (from 2001 to 2017) available on two websites: [BeerAdvocate](https://www.beeradvocate.com/) and [RateBeer](https://www.ratebeer.com/). The dataset contain both textual (text reviews) and numerical data (ratings).
+The dataset consists of beer reviews collected over a period of 17 years (from 2001 to 2017) available on two websites: [BeerAdvocate](https://www.beeradvocate.com/) and [RateBeer](https://www.ratebeer.com/). The dataset contain both textual (text reviews) and numerical data (ratings).
 
 Following some analysis, the decision was to merge the data from both platforms. This merging process aimed to obtain more robust and meaningful results in terms of expert and non-expert ratings. It was observed that combining both datasets reduces more biases than considering each dataset separately. In order to mitigate potential biases introduced by the merge, a standardization procedure has been implemented for the different rating categories used by both websites.
 
-In order to increase comparability, users on one website were linked with their counterparts (ids) on the other website, and a similar linkage process was applied to beers. This approach ensures a more equitable evaluation of ratings across the merged dataset, providing a foundation for reliable and unbiased analyses.
+In order to increase comparability, users on one website are linked with their counterparts (ids) on the other website, and a similar linkage process is applied to beers. This approach ensures a more equitable evaluation of ratings across the merged dataset, providing a foundation for reliable and unbiased analyses.
 
 # Who is an expert ?
 
@@ -35,7 +36,7 @@ In order to increase comparability, users on one website were linked with their 
 >
 > When something is important enough, you do it even if the odds are not in your favor. -->
 
-In this section, the definition of experts is introduced. The individuals who could be able to help making our beer successful.
+In this section, the definition of experts is introduced. The individuals who are potentially able to help making a beer successful.
 
 ## Distribution of the number of ratings per user
 
@@ -49,18 +50,15 @@ The distribution of the CCDF (complementary cumulative distribution function) is
 
 ### Define who is a massive rater
 
-In order to separate people in two group, a definition of a massive rater, called from now an "expert" has to be found. The choice was made here to consider the number of ratings per year and aggregate scores from the past 3 years with the formula:
+In order to separate people in two groups, a definition of a massive rater, called from now an "expert" has to be found. The choice was made here to consider the number of ratings per year and aggregate scores from the past 3 years with the formula:
 
 $$
 S_{Y_j} = 2 \cdot R_{Y_{j}} + 0.5 \cdot R_{Y_{j-1}} + 0.25 \cdot R_{Y_{j-2}} + 0.1 \cdot R_{Y_{j-3}}
 $$
 
-, where $$R_{Y_j}$$ denotes the number of ratings for the year j and $$S_{Y_j}$$ is the score of the user for the year j.
-The experts are then people from the 0.995 quantile of the score calculate previously (among those who have a non-zero score i.e active users).
-These users only represent 0.5 % of active users and yet their influence on the ratings are huge since they account for huge part the final mean rating that will be displayed on the websites.
+where $$R_{Y_j}$$ denotes the number of ratings for the year $$j$$ and $$S_{Y_j}$$ is the score of the user for the year $$j$$. Therefore, the experts are people from the $$0.995$$ quantile of the score calculate previously (among those who have a non-zero score i.e. active users). These users only represent $$0.5$$% of active users and yet their influence on the ratings are huge since they account for huge part the final mean rating that will be displayed on the websites.
 
-By analyzing beers with at least 100 ratings per year, we observe that the difference in median ratings for the majority of them between experts and non-experts is very small. This reinforces the notion that while a discrepancy in ratings exists between the two parties, the overall trend remains largely consistent. It would be interesting to delve more deeply into this difference.
-
+By analyzing beers with at least 100 ratings per year, we observe that the difference in median ratings for the majority of them between experts and non-experts is very small. It reinforces the notion that while a discrepancy in ratings exists between the two parties, the overall trend remains largely consistent. It would be interesting to delve more deeply into this difference.
 
 ### What an impact !
 
@@ -70,13 +68,11 @@ By analyzing beers with at least 100 ratings per year, we observe that the diffe
 
 First of all, even if experts account only for 0.5% of the active they represent a big part in the ratings of the beers. There are even some years and styles for which they overtake non experts part. Thus, their voice really matter since they can make a huge difference for the final average rating displayed on websites.
 
-Plus we found that experts tend to rate beers that are less famous than those that are rated by casual users. Threfore, the fast and early sucess might depend a lot on experts tastes.
+Additionally, we found that experts tend to rate beers that are less famous than those that are rated by casual users. Thus, the fast and early success might depend a lot on experts tastes.
 
 <div style="text-align: center;">
   <img src="/assets/images/expert_proportion_since_begining.png" alt="expert_prop">
 </div>
-
-
 
 In general, a notable pattern emerges where experts initiate the rating trend, establishing an initial inclination. As the evaluation proceeds, non-experts increasingly contribute ratings, potentially outnumbering expert assessments. This indicates that experts set the initial tone, and non-experts play a significant role by adding a larger volume of assessments as the overall trend develops.
 
