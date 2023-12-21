@@ -17,7 +17,7 @@ In this flavorful journey, focus is put on analysing the reliability of expert r
 
 # About the Dataset
 
-The dataset consists of beer reviews collected over a period of 17 years (from 1996 to 2017) available on two websites: [BeerAdvocate](https://www.beeradvocate.com/) and [RateBeer](https://www.ratebeer.com/). The dataset contains both textual (text reviews) and numerical data (approximately 14 million ratings).
+The dataset consists of beer reviews collected over a period of 21 years (from 1996 to 2017) available on two websites: [BeerAdvocate](https://www.beeradvocate.com/) and [RateBeer](https://www.ratebeer.com/). However, due to the small amount of data before the year 2002, results are only interpreted after this date. The dataset contains both textual (text reviews) and numerical data (approximately 14 million ratings).
 
 Following some analysis, the decision has been to merge the data from both platforms. This merging process aimed at obtaining more robust and meaningful results in terms of expert and non-expert ratings. It was observed that combining both datasets reduces more biases than considering each dataset separately. Considering only one or studying each of them separately would have resulted in users being experts on one website and casual users on the second, even if the user represents the same person. In order to mitigate potential biases introduced by the merge, a standardisation procedure has been implemented for the different attribute ratings that have different scales on the two websites.
 
