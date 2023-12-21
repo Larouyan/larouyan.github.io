@@ -4,11 +4,12 @@ layout: default
 
 <!-- Text can be **bold**, _italic_, or ~~strikethrough~~. -->
 
-Immersed in the sea of floating litters of beer within our minds, let's plunge into the intoxicating analysis of experts and their comparison with the "everyday" beer enthusiasts. But how to defines an expert among the customers? Why should truly trusting what is labelled as expertise?  
- 
-Let's also take the example of a small local brewery that wishes to open. Should it rather trust the mass opinion, the public's view? Or should it simply rely on expert ratings to turn its beer into an unmissable blockbuster for a Saturday night with friends?
+Immersed in the sea of floating litres of beer within our minds, let’s plunge into the intoxicating analysis of experts and their comparison with the “everyday” beer enthusiasts. But how to define an expert among the customers? Why should truly trusting what is labelled as expertise ?
 
-In this flavorful journey, focus was put on analyzing the reliability of expert ratings, pondering if a brewery’s destiny lies in the hands of the average after-football-game beer drinker or in the discerned palate of insiders. Take a beer and dive in this foamy exploration, where the abundance of data unfolds the secrets of brewing success.
+Let’s also take the example of a small local brewery that wishes to produce a new beer. In order to obtain relevant feedback, should it rather trust the public’s view or could it only rely on experts' opinion to turn its beer into an unmissable blockbuster for a Saturday night with friends.
+
+In this flavorful journey, focus is put on analysing the reliability of expert ratings, pondering if a brewery’s destiny lies in the hands of the casual amateur drinker or in the discerned palate of insiders. Take a beer and dive in this foamy exploration, where the abundance of data unfolds the secrets of brewing success.
+
 
 <div style="text-align: center;">
   <img src="/assets/images/dicaprio.png" alt="dicaprio" width="300" height="300">
@@ -16,78 +17,71 @@ In this flavorful journey, focus was put on analyzing the reliability of expert 
 
 # About the Dataset
 
-The dataset consists of beer reviews collected over a period of 17 years (from 2001 to 2017) available on two websites: [BeerAdvocate](https://www.beeradvocate.com/) and [RateBeer](https://www.ratebeer.com/). The dataset contain both textual (text reviews) and numerical data (ratings).
+The dataset consists of beer reviews collected over a period of 17 years (from 2001 to 2017) available on two websites: [BeerAdvocate](https://www.beeradvocate.com/) and [RateBeer](https://www.ratebeer.com/). The dataset contains both textual (text reviews) and numerical data (approximately 14 million ratings).
 
-Following some analysis, the decision was to merge the data from both platforms. This merging process aimed to obtain more robust and meaningful results in terms of expert and non-expert ratings. It was observed that combining both datasets reduces more biases than considering each dataset separately. In order to mitigate potential biases introduced by the merge, a standardization procedure has been implemented for the different rating categories used by both websites.
+Following some analysis, the decision has been to merge the data from both platforms. This merging process aimed at obtaining more robust and meaningful results in terms of expert and non-expert ratings. It was observed that combining both datasets reduces more biases than considering each dataset separately. Considering only one or studying each of them separately would have resulted in users being experts on one website and casual users on the second, even if the user represents the same person. In order to mitigate potential biases introduced by the merge, a standardisation procedure has been implemented for the different attribute ratings that have different scales on the two websites.
 
-In order to increase comparability, users on one website are linked with their counterparts (ids) on the other website, and a similar linkage process is applied to beers. This approach ensures a more equitable evaluation of ratings across the merged dataset, providing a foundation for reliable and unbiased analyses.
+As users can be registered on both websites, user ids are matched and a similar linkage process is applied to beers. This approach ensures a correct users and beers identification across the merged dataset, providing a foundation for reliable and unbiased analyses.
 
 # Who is an expert ?
 
-<!-- > This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor. -->
-
-In this section, the definition of experts is introduced. The individuals who are potentially able to help making a beer successful.
+In the beer world, experts are determined by their popularity and their personal skills. As these aspects are not reflected in provided data - no personal information of users are provided - there is a need to find a proper definition of an expert.
 
 ## Distribution of the number of ratings per user
-
-Let's dive into the satistics:
 
 <div style="text-align: center;">
   <img src="/assets/images/CCDF.png" alt="CCDF">
 </div>
 
-The distribution of the CCDF (complementary cumulative distribution function) is heavy-tailed, indicating that there are many users who have posted only few ratings, and conversely, a small number of users who are prolific raters. This observation motivates us to delve deeper into understanding the distinctions between these prolific raters and the rest of the user population. We'll pick up our experts from these figures.
+Examining the distribution of ratings count marks a great starting point for the journey. The Complementary Cumulative Distribution Function is heavy-tailed, indicating that many users posted only a few ratings. Conversely, there is a small number of prolific users. This observation motivates to delve deeper into understanding the distinctions between these prolific raters and the rest of the population. Let’s pick up the experts from these figures
 
-### Define who is a massive rater
+### Define the massive raters
 
-In order to separate people in two groups, a definition of a massive rater, called from now an "expert" has to be found. The choice was made here to consider the number of ratings per year and aggregate scores from the past 3 years with the formula:
+In order to separate users in two groups, a definition of a massive rater, called from now an “expert” has to be found. The choice was made here to consider the number of ratings per year and aggregate scores from the past 3 years with the formula:
 
 $$
 S_{Y_j} = 2 \cdot R_{Y_{j}} + 0.5 \cdot R_{Y_{j-1}} + 0.25 \cdot R_{Y_{j-2}} + 0.1 \cdot R_{Y_{j-3}}
 $$
 
-where $$R_{Y_j}$$ denotes the number of ratings for the year $$j$$ and $$S_{Y_j}$$ is the score of the user for the year $$j$$. Therefore, the experts are people from the $$0.995$$ quantile of the score calculate previously (among those who have a non-zero score i.e. active users). These users only represent $$0.5$$% of active users and yet their influence on the ratings are huge since they account for huge part the final mean rating that will be displayed on the websites.
-
-By analyzing beers with at least 100 ratings per year, we observe that the difference in median ratings for the majority of them between experts and non-experts is very small. It reinforces the notion that while a discrepancy in ratings exists between the two parties, the overall trend remains largely consistent. It would be interesting to delve more deeply into this difference.
+where $$R_{Y_j}$$ denotes the number of ratings for the year $$j$$ and $$S_{Y_j}$$ is the score of the user for the year $$j$$. Therefore, the experts are people from the $$0.995$$ quantile of the score calculate previously (among those who have a non-zero score i.e. active users). These users only represent $$0.5$$% of active users, although their influence on the ratings are considerable since they account for a consequent part of the final mean rating.
 
 ### What an impact !
 
 <div style="text-align: center;">
-  <img src="/assets/images/paleale.png" alt="Pale Ale">
+  <img src="/assets/images/american_pale_ale.png" alt="Pale Ale">
 </div>
 
-First of all, even if experts account only for 0.5% of the active they represent a big part in the ratings of the beers. There are even some years and styles for which they overtake non experts part. Thus, their voice really matter since they can make a huge difference for the final average rating displayed on websites.
-
-Additionally, we found that experts tend to rate beers that are less famous than those that are rated by casual users. Thus, the fast and early success might depend a lot on experts tastes.
+Even if experts are a minority of the active users, they represent a big part in the ratings of the beers. There are even some years and styles for which they overtake non experts. Thus, their voice really matters since they can make a huge difference for the final average rating displayed on websites. This massive influence is depicted for the style “American Pale Ale”, one of the most rated styles.
 
 <div style="text-align: center;">
-  <img src="/assets/images/expert_proportion_since_begining.png" alt="expert_prop">
+  <img src="/assets/images/mean_ratings_experts_casuals.jpg" alt="expert_prop">
 </div>
 
 In general, a notable pattern emerges where experts initiate the rating trend, establishing an initial inclination. As the evaluation proceeds, non-experts increasingly contribute ratings, potentially outnumbering expert assessments. This indicates that experts set the initial tone, and non-experts play a significant role by adding a larger volume of assessments as the overall trend develops.
 
-So it might be interesting to know if their ratings differentiate.
+Thus, it might be interesting to know if their ratings differ.
+
+# What sets apart experts from non-experts ?
 
 <iframe src="{{ site.baseurl }}/assets/plots/interactive_plot_attributes.html" width="100%" height="500" style="border: none;"></iframe>
 
+The overall trend shows that experts assess beers more critically than non-experts. Moreover, it was remarked that experts rate beers that are less famous than beers rated by casual users.
+
+A beer expert often has a more refined palate and extensive experience with various beer styles, ingredients, and brewing techniques. Their exposure allows them to detect subtle nuances, complexities, and flaws that a casual consumer might overlook. Additionally, experts may have a deeper understanding of the technical aspects of brewing, influencing their preferences and perceptions of taste. Also, analysing the reviews and performing a sentiment analysis taught us that experts’ reviews are significantly less positive than casual ones. Then why should the breweries trust the experts while their perceptions seem to differentiate from the average consumer? It could seem paradoxical if the brewery wants to maximise its sales.
+
+
 <iframe src="{{ site.baseurl }}/assets/plots/interactive_plot_styles.html" width="100%" height="500" style="border: none;"></iframe>
-
-<iframe src="{{ site.baseurl }}/assets/plots/interactive_plot_beers.html" width="100%" height="500" style="border: none;"></iframe>
-
-<iframe src="{{ site.baseurl }}/assets/plots/interactive_plot_styles_rating.html" width="100%" height="500" style="border: none;"></iframe>
-
-It has been observed that experts tend to assess beers more critically than non-experts. However, despite these discernible distinctions, a common trend in ratings emerges, indicating that specific qualities are universally appreciated or disliked across both groups. Experts tend to be more severe than casual raters.
-Moreover, it was remarked that experts rate beers that are less famous than beers rated by casual users.
-A beer expert often has a more refined palate and extensive experience with various beer styles, ingredients, and brewing techniques. Their exposure allows them to detect subtle nuances, complexities, and flaws that a casual consumer might overlook. Additionally, experts may have a deeper understanding of the technical aspects of brewing, influencing their preferences and perceptions of taste. 
-Also, analyzing the reviews and performing a sentiment analysis taught us that experts' reviews are significantly less positive than casual ones.
-Then why should the breweries trust the experts while their perceptions seem to differentiate from the average consumer. It could seem paradoxical if the brewery wants to maximize its sales.
 
 So far, it has been observed that experts tend to be stricter and more demanding in their ratings, which can clearly be explained by a certain professionalism and a palate that is more sensitive to the nuances of different beer tastes. Indeed, experts are accustomed to rating all types of beers, of different styles, and especially beers that are not necessarily well-known, thus contributing to having a potentially greater impact on the success of new blockbusters. So, when analyzing the opening of the brewery, there is a desire to take into account these sometimes slightly harsher and negative opinions, but which, in the long term, can certainly show all their advantages.
 However, let's not forget that every expert was once a beginner and had to start at the very bottom of the ladder. That's why, when all is said and done, the question arises as to whether there aren't a few similarities in spite of everything.
 
 ## So different but so similar ?
+
+
+<iframe src="{{ site.baseurl }}/assets/plots/interactive_plot_beers.html" width="100%" height="500" style="border: none;"></iframe>
+
+<iframe src="{{ site.baseurl }}/assets/plots/interactive_plot_styles_rating.html" width="100%" height="500" style="border: none;"></iframe>
+
 
 If we take a closer look at the different beers evaluated by experts and non-experts, we can still see some similarities. In fact, if we look at their distribution, we can see that despite the small bias still present between experts and non-experts, we can observe a certain similarity in the shape of the distributions. Admittedly, if we consider the number of ratings, these numbers are incomparable, but the distribution according to the years or the distribution according to the styles is quite similar for our two categories in their respective scales.
 
