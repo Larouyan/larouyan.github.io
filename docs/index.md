@@ -17,7 +17,7 @@ In this flavorful journey, focus is put on analysing the reliability of expert r
 
 # About the Dataset
 
-The dataset consists of beer reviews collected over a period of 17 years (from 2001 to 2017) available on two websites: [BeerAdvocate](https://www.beeradvocate.com/) and [RateBeer](https://www.ratebeer.com/). The dataset contains both textual (text reviews) and numerical data (approximately 14 million ratings).
+The dataset consists of beer reviews collected over a period of 17 years (from 1996 to 2017) available on two websites: [BeerAdvocate](https://www.beeradvocate.com/) and [RateBeer](https://www.ratebeer.com/). The dataset contains both textual (text reviews) and numerical data (approximately 14 million ratings).
 
 Following some analysis, the decision has been to merge the data from both platforms. This merging process aimed at obtaining more robust and meaningful results in terms of expert and non-expert ratings. It was observed that combining both datasets reduces more biases than considering each dataset separately. Considering only one or studying each of them separately would have resulted in users being experts on one website and casual users on the second, even if the user represents the same person. In order to mitigate potential biases introduced by the merge, a standardisation procedure has been implemented for the different attribute ratings that have different scales on the two websites.
 
@@ -35,7 +35,7 @@ In the beer world, experts are determined by their popularity and their personal
 
 Examining the distribution of ratings count marks a great starting point for the journey. The Complementary Cumulative Distribution Function is heavy-tailed, indicating that many users posted only a few ratings. Conversely, there is a small number of prolific users. This observation motivates to delve deeper into understanding the distinctions between these prolific raters and the rest of the population. Let’s pick up the experts from these figures
 
-### Define the massive raters
+## Define the massive raters
 
 In order to separate users in two groups, a definition of a massive rater, called from now an “expert” has to be found. The choice was made here to consider the number of ratings per year and aggregate scores from the past 3 years with the formula:
 
@@ -45,10 +45,10 @@ $$
 
 where $$R_{Y_j}$$ denotes the number of ratings for the year $$j$$ and $$S_{Y_j}$$ is the score of the user for the year $$j$$. Therefore, the experts are people from the $$0.995$$ quantile of the score calculate previously (among those who have a non-zero score i.e. active users). These users only represent $$0.5$$% of active users, although their influence on the ratings are considerable since they account for a consequent part of the final mean rating.
 
-### What an impact !
+## What an impact !
 
 <div style="text-align: center;">
-  <img src="/assets/images/american_pale_ale.png" alt="Pale Ale">
+  <img src="/assets/images/american_pale_ale.jpg" alt="Pale Ale">
 </div>
 
 Even if experts are a minority of the active users, they represent a big part in the ratings of the beers. There are even some years and styles for which they overtake non experts. Thus, their voice really matters since they can make a huge difference for the final average rating displayed on websites. This massive influence is depicted for the style “American Pale Ale”, one of the most rated styles.
@@ -67,7 +67,7 @@ Thus, it might be interesting to know if their ratings differ.
 
 The overall trend shows that experts assess beers more critically than non-experts. Moreover, it was remarked that experts rate beers that are less famous than beers rated by casual users.
 
-A beer expert often has a more refined palate and extensive experience with various beer styles, ingredients, and brewing techniques. Their exposure allows them to detect subtle nuances, complexities, and flaws that a casual consumer might overlook. Additionally, experts may have a deeper understanding of the technical aspects of brewing, influencing their preferences and perceptions of taste. Also, analysing the reviews and performing a sentiment analysis taught us that experts’ reviews are significantly less positive than casual ones. Then why should the breweries trust the experts while their perceptions seem to differentiate from the average consumer? It could seem paradoxical if the brewery wants to maximise its sales.
+A beer expert often has a more refined palate and extensive experience with various beer styles, ingredients, and brewing techniques. Their exposure allows them to detect subtle nuances, complexities, and flaws that a casual consumer might overlook. Additionally, experts may have a deeper understanding of the technical aspects of brewing, influencing their preferences and perceptions of taste. Analysing the reviews and performing a sentiment analysis showed that experts’ reviews are significantly less positive than casual ones. Then why should the breweries trust the experts while their perceptions seem to differentiate from the average consumer? It could seem paradoxical if the brewery wants to maximise its sales.
 
 
 <iframe src="{{ site.baseurl }}/assets/plots/interactive_plot_styles.html" width="100%" height="500" style="border: none;"></iframe>
