@@ -58,7 +58,7 @@ Even if experts are a minority of the active users, they represent a big part in
   <img src="/assets/images/mean_ratings_experts_casuals.jpg" alt="expert_prop">
 </div>
 
-(N.B. 95% confidence interval has not be been plot since the maximum thick of it is 0.0005)
+(N.B. 95% confidence interval has not be been plot since the maximum thickness of it is 0.0005)
 
 In general, a notable pattern emerges where experts initiate the rating trend, establishing an initial inclination. As the evaluation proceeds, non-experts increasingly contribute ratings, potentially outnumbering expert assessments. This indicates that experts set the initial tone, and non-experts play a significant role by adding a larger volume of assessments as the overall trend develops.
 
@@ -88,6 +88,8 @@ Taking a closer look at the different beers evaluated by experts and non-experts
 (N.B. The proposed graph below is made upon beers over 8000 ratings but the behaviour generalises)
 
 <iframe src="{{ site.baseurl }}/assets/plots/interactive_plot_styles_rating.html" width="100%" height="500" style="border: none;"></iframe>
+
+(N.B. 95% confidence interval has not be been plot since the maximum thickness of it is 0.0004)
 
 In the end, experts are different, but their tendencies are similar to that of non-experts.
 
