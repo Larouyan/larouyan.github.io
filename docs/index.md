@@ -116,8 +116,10 @@ In the context of creating a new beer, these findings bear significance. The ana
 Whether by observing the scoring or the comments left on the ratings, it is evident that experts, despite their relatively limited numbers, have a significant impact on the reputation of the beers featured on both sites. Despite their tendency to rate beers more critically than non-experts, reflecting a discerning and thoughtful perspective, they share similar traits with the other raters, indicating a corresponding behaviour. Their refined vocabulary and more accurate reviews contribute to their usefulness.
 
 When looking at how people score and comment on beer ratings, something becomes clear: even though there aren't many experts, their opinions really matter in shaping how these beers are rated on both sites. These experts tend to be really pickier than casuals when they rate beers. It shows they are careful and thoughtful about what they're doing. However, here's the interesting fact: despite being critical, these experts are a lot like the other people who rate beers. 
+
 What makes these experts stand out isn't just that they're really critical. The main difference lies in the difference of the vocabulary used. They employ fancy words and write clear reviews. It implies that their reviews are really helpful and easy to understand for everyone who loves beer. These experts aren't just adding their thoughts for fun, they are actually making a big difference. 
-"Stay tuned! Experts are raising a new blockbuster”
+
+_"Stay tuned! Experts are raising a new blockbuster"_
 
 
 # Ethics 
