@@ -4,7 +4,7 @@ layout: default
 
 <!-- Text can be **bold**, _italic_, or ~~strikethrough~~. -->
 
-Immersed in the sea of floating litres of beer within our minds, let’s plunge into the intoxicating analysis of experts and their comparison with the “everyday” beer enthusiasts. But how to define an expert among the customers? Why should truly trusting what is labelled as expertise ?
+Immersed in the sea of floating litres of beer within our minds, let’s plunge into the intoxicating analysis of experts and their comparison with the “everyday” beer enthusiasts. But how to define an expert among the customers ? Why should one truly trust what is labeled as expertise ?
 
 Let’s also take the example of a small local brewery that wishes to produce a new beer. In order to obtain relevant feedback, should it rather trust the public’s view or could it only rely on experts' opinion to turn its beer into an unmissable blockbuster for a Saturday night with friends.
 
@@ -19,7 +19,7 @@ In this flavorful journey, focus is put on analysing the reliability of expert r
 
 The dataset consists of beer reviews collected over a period of 21 years (from 1996 to 2017) available on two websites: [BeerAdvocate](https://www.beeradvocate.com/) and [RateBeer](https://www.ratebeer.com/). However, due to the small amount of data before the year 2002, results are only interpreted after this date. The dataset contains both textual (text reviews) and numerical data (approximately 14 million ratings).
 
-Following some analysis, the decision has been to merge the data from both platforms. This merging process aimed at obtaining more robust and meaningful results in terms of expert and non-expert ratings. It was observed that combining both datasets reduces more biases than considering each dataset separately. Considering only one or studying each of them separately would have resulted in users being experts on one website and casual users on the second, even if the user represents the same person. In order to mitigate potential biases introduced by the merge, a standardisation procedure has been implemented for the different attribute ratings that have different scales on the two websites.
+Following some analysis, the decision has been to merge the data from both platforms. This merging process aimed at obtaining more robust and meaningful results in terms of expert and non-expert ratings. It was observed that combining both datasets reduces biases than considering each dataset separately. Considering only one or studying each of them separately would have resulted in users being experts on one website and casual users on the second, even if the user represents the same person. In order to mitigate potential biases introduced by the merge, a standardisation procedure has been implemented for the different attribute ratings that have different scales on the two websites.
 
 As users can be registered on both websites, user ids are matched and a similar linkage process is applied to beers. This approach ensures a correct users and beers identification across the merged dataset, providing a foundation for reliable and unbiased analyses.
 
@@ -58,7 +58,7 @@ Even if experts are a minority of the active users, they represent a big part in
   <img src="/assets/images/mean_ratings_experts_casuals.jpg" alt="expert_prop">
 </div>
 
-N.B. 95% confidence interval has not be been plot since the maximum thickness of it is 0.0005
+N.B. the 95% confidence interval has not been plotted since the maximum thickness of it is 0.0005
 
 In general, a notable pattern emerges where experts initiate the rating trend, establishing an initial inclination. As the evaluation proceeds, non-experts increasingly contribute ratings, potentially outnumbering expert assessments. This indicates that experts set the initial tone, and non-experts play a significant role by adding a larger volume of assessments as the overall trend develops.
 
@@ -85,7 +85,7 @@ The Pale Lager style, which is one of the beers with a very low average rating c
 
 N.B. The proposed graph above is made upon beers over 8000 ratings but the behaviour generalises. Furthermore 95% confidence interval has not be been plot since the maximum thickness of it is 0.0004
 
-Taking a closer look at the different beers evaluated by experts and non-experts reveals some similarities. Indeed, the distribution of the two categories hold a certain similarity in their shape. The means of both distributions are significantly different for all the beers, due to the severity of the experts. However, the difference is seen to be very low, with a maximum absolute difference of 0.24 and an average of 0.13 ! Moreover, for 56% of beers , variances  are significantly different. Inside this percentage, the ratio of the expert standard deviation over casual one’s is always less than 1, showcasing that experts are more homogeneous. Plus, the ratio always stands above 0.75 which assesses that the differences in the variances are small. Therefore, expert and casual raters follow the same general trend.
+Taking a closer look at the different beers evaluated by experts and non-experts reveals some similarities. Indeed, the distribution of the two categories hold a certain similarity in their shape. The means of both distributions are significantly different for all the beers, due to the severity of the experts. However, the difference is seen to be very low, with a maximum absolute difference of 0.24 and an average of 0.13 ! Moreover, for 56% of beers , variances  are significantly different. Inside this percentage, the ratio of the expert standard deviation over casual ones is always less than 1, showcasing that experts are more homogeneous. Plus, the ratio always stands above 0.75 which assesses that the differences in the variances are small. Therefore, expert and casual raters follow the same general trend.
 
 <iframe src="{{ site.baseurl }}/assets/plots/interactive_plot_beers.html" width="100%" height="500" style="border: none;"></iframe>
 
