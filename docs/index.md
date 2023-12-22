@@ -79,17 +79,15 @@ It has been observed that experts tend to be stricter and more demanding in thei
 
 Examining mean ratings of top 16 rated styles results in the fact that experts and non experts follow the same trend over the years.
 
-The Pale Lager style as an example, which is one of the beers with a very low average rating. Expectedly, a very low score is anticipated from most people, but a slight difference from the experts. However, over the years, it’s always a style of beer that fails to convince either experts or non-experts in any significant way. In contrast, if we take the Witbier style as an example, it's noticeable that the difference between the average score given by experts and non-experts remains very similar over the years. This trend does not restrict to the most rated beer but can be extended to the global set of beers. While a difference in their mean rating is significant, the overall behaviour of both categories are similar.
-
-<iframe src="{{ site.baseurl }}/assets/plots/interactive_plot_beers.html" width="100%" height="500" style="border: none;"></iframe>
-
-Taking a closer look at the different beers evaluated by experts and non-experts reveals some similarities. Indeed, the distribution of the two categories hold a certain similarity in their shape. The means of both distributions are significantly different for all the beers, due to the severity of the experts. However, the difference is seen to be very low, with a maximum absolute difference of 0.24 and an average of 0.13 ! Moreover, for 56% of beers , variances  are significantly different. Inside this percentage, the ratio of the expert standard deviation over casual one’s is always less than 1, showcasing that experts are more homogeneous. Plus, the ratio always stands above 0.75 which assesses that the differences in the variances are small. Therefore, expert and casual raters follow the same general trend.
-
-(N.B. The proposed graph below is made upon beers over 8000 ratings but the behaviour generalises)
+The Pale Lager style, which is one of the beers with a very low average rating can be taken as an example. Expectedly, a very low score is anticipated from most people, but a slight difference from the experts. However, over the years, it’s always a style of beer that fails to convince either experts or non-experts in any significant way. In contrast, by taking the Witbier style as an example, it's noticeable that the difference between the average score given by experts and non-experts remains very similar over the years. This trend does not restrict to the most rated beer but can be extended to the global set of beers. While a difference in their mean rating is significant, the overall behaviour of both categories are similar.
 
 <iframe src="{{ site.baseurl }}/assets/plots/interactive_plot_styles_rating.html" width="100%" height="500" style="border: none;"></iframe>
 
-(N.B. 95% confidence interval has not be been plot since the maximum thickness of it is 0.0004)
+N.B. The proposed graph above is made upon beers over 8000 ratings but the behaviour generalises. Furthermore 95% confidence interval has not be been plot since the maximum thickness of it is 0.0004
+
+Taking a closer look at the different beers evaluated by experts and non-experts reveals some similarities. Indeed, the distribution of the two categories hold a certain similarity in their shape. The means of both distributions are significantly different for all the beers, due to the severity of the experts. However, the difference is seen to be very low, with a maximum absolute difference of 0.24 and an average of 0.13 ! Moreover, for 56% of beers , variances  are significantly different. Inside this percentage, the ratio of the expert standard deviation over casual one’s is always less than 1, showcasing that experts are more homogeneous. Plus, the ratio always stands above 0.75 which assesses that the differences in the variances are small. Therefore, expert and casual raters follow the same general trend.
+
+<iframe src="{{ site.baseurl }}/assets/plots/interactive_plot_beers.html" width="100%" height="500" style="border: none;"></iframe>
 
 In the end, experts are different, but their tendencies are similar to that of non-experts.
 
@@ -119,7 +117,7 @@ Whether by observing the scoring or the comments left on the ratings, it is evid
 
 When looking at how people score and comment on beer ratings, something becomes clear: even though there aren't many experts, their opinions really matter in shaping how these beers are rated on both sites. These experts tend to be really pickier than casuals when they rate beers. It shows they are careful and thoughtful about what they're doing. However, here's the interesting fact: despite being critical, these experts are a lot like the other people who rate beers. 
 
-What makes these experts stand out isn't just that they're really critical. The main difference lies in the difference of the vocabulary used. They employ fancy words and write clear reviews. It implies that their reviews are really helpful and easy to understand for everyone who loves beer. These experts aren't just adding their thoughts for fun, they are actually making a big difference. 
+What makes these experts stand out isn't just that they're really critical. The main difference lies in the difference of the vocabulary used: they employ fancy words. These experts aren't just adding their thoughts for fun, they are actually making a big difference. 
 
 _"Stay tuned! Experts are raising a new blockbuster"_
 
