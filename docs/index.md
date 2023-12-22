@@ -129,25 +129,15 @@ _"Stay tuned! Experts are raising a new blockbuster"_
 <div class="content">
   <div class="text">
     <p>
-      In contemporary machine learning and applied data analysis projects like Beer Reviews Analysis, the evaluation of ethical risks is gaining importance. As designers of this kind of project, it is the responsibility to assess potential impacts and address them responsibly.
+      In contemporary machine learning and applied data analysis projects like beer reviews analysis, the evaluation of ethical risks is gaining importance. As designers of this kind of project, it is important to assess potential harmful impacts.
     </p>
     <p>
-      Focusing specifically on the Beer Analysis, one identifiable ethical risk involves influencing consumer choices. There are both indirect stakeholders, who are impacted by the system but do not directly interact with it (including the Public, Government, or Environment), and direct stakeholders, such as admins, end-users, or contractors, who have direct interactions with the system.
+      Identifying experts through the number of reviews could lead to potential ethical risks. For instance, by promoting alcohol consumption. If breweries look for experts with the presented method, the average beer drinker may want to become an expert, and a race to the number of ratings could start off. Another example is the standardisation of tastes caused by the mass to follow the experts recommendations. Some beers may disappear or not be produced any more. Thus, it could lead to a cultural vacancy.
     </p>
-    
   </div>
   <div class="image">
     <img src="/assets/images/ethic.jpeg" alt="Ethic" width="400" height="400">
   </div>
 </div>
 
-Taking the example of influencing consumer choices, considering only direct stakeholders, which are the customers. If the dataset is used to manipulate consumer choices by promoting certain beers over others through fake reviews or biased recommendations, it can be deceptive and unethical.
-
-In this project, the aim is to use both datasets, incorporating the maximum number of reviews possible to minimise bias in consumer reviews and recommendations. Relying on only one dataset could introduce more bias into consumer choices. Hence, incorporating both datasets serves as an additional measure to mitigate bias and provide more robust and unbiased consumer advice.
-
-
-
-
-
-
-
+Similarly, a person can have high alcohol consumption and make plenty of ratings. If this user is detected as an expert, some breweries may want to take its advice. However, promoting an alcoholic beer tasted has to be avoided. As introduced in the text analysis, these side-effects can be pondered by examining the reviews.
